@@ -1,0 +1,85 @@
+<html>
+<head>
+<meta charset="UTF-8">
+				
+<meta name="viewport" width="device-width, initial-scale=1">
+
+	<title>sign up</title>
+<link rel="stylesheet" href="style2.css">
+	<link rel="icon" type="image/x-icon" href="icon.png">	
+</head>
+<body>
+<div class="form">
+	<div id="switch">
+		<div id="btn"></div>
+		<button type="buton" class="togle-btn" onclick="register()">register</button>
+		<button type="buton" class="togle-btn" onclick="login()">login</button>
+		
+	</div>
+
+	<div class="image-link">
+		<img src="fb.png">
+		<img src="tw.png">
+		<img src="G.png">
+	</div>
+
+<form id="registerform" class="formlog" action="index.html" >
+
+
+<input type="text" placeholder="ENTER YOUR NAME " class="input" id="name"></input>
+
+<input type="email" placeholder="ENTER YOUR EMAIL" class="input" required></input>
+
+<input type="password" placeholder="ENTER YOUR PASSWORD" class="input" required></input>
+
+<input type="password" placeholder="COMFIRM YOUR PASSWORD" class="input" required></input>
+
+
+<input type="checkbox" class="checker"><span>I agree to the terms and conditions</span></input>
+
+<button type="submit" class="submitb-btn">Register </button>
+ 
+</form>
+                                                                 
+<form id="loginform" class="formlog" action="index.html" >
+
+
+<input type="text" placeholder="ENTER YOUR NAME " class="input"></input>
+
+
+
+<input type="password" placeholder="ENTER YOUR PASSWORD" class="input" required></input>
+
+<input type="password" placeholder="Comfirm Password" class="input" required></input>
+
+<input type="checkbox" class="checker"><span>Remember me</span></input>
+
+<button type="submit" class="submitb-btn">Log In </button>
+ 
+</form>
+</div>
+
+<script>
+	
+	let reg = document.getElementById("registerform");
+	let log = document.getElementById("loginform");
+	let box = document.getElementById("btn");
+	let btn = document.querySelector(".submitb-btn");
+
+	function register(){
+	reg.style.left="50px"
+	log.style.left="450px"
+	box.style.left="0px";			
+	}
+	
+	function login(){
+	reg.style.left="-450px"	
+	log.style.left="50px"
+	box.style.left="110px";	
+	} 
+	let x = document.getElementById("name").value;
+	btn.addEventListener("click", login);
+	
+	
+</script>
+</body>
